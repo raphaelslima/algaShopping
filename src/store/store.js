@@ -1,13 +1,20 @@
-import {legacy_createStore as creatorStore, combineReducers} from 'redux'
+import {legacy_createStore, combineReducers} from 'redux'
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 
-import CalculatorReducer from './Calculator/Calculator.reducer'
-import ProductsReducer from './Products/Products.reducer'
+import calculatorReducer from './Calculator/Calculator.reducer'
+import productsReducer from './Products/Products.reducer'
 
 const rootReducer = combineReducers({
-    calculator: CalculatorReducer,
-    products: ProductsReducer
+  calculator: calculatorReducer,
+  products: productsReducer
 })
 
-const store = creatorStore(rootReducer)
+const persistedReducer = persistReducer({
+  key: 'root',
+  storage
+}, rootReducer)
 
-export default store
+export const store = legacy_createStore(persistedReducer)
+export const persisetdStore = persistStore(store)
+
