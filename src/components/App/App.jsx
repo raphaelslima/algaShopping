@@ -7,7 +7,6 @@ import extractPercentage from '../../utils/extractPercentage'
 import AppContainer from '../AppContainer/AppContainer'
 import AppHeader from '../AppHeader'
 import ShoppingList from '../ShoppingList'
-import Calculator from '../AppCalculator/Calculator'
 
 import { Wrapper, Container } from './App.styles'
 
@@ -100,7 +99,6 @@ function App () {
               }) }
             </div>
 
-              <Calculator/>
           </div>
         </div>}
       />
