@@ -1,6 +1,8 @@
 # ALGA SHOPPING 
 
 Software de um carrinho de compras de um supermercado criado no workshop da algaWorks durante a imersão ReactJS e o desafio ReactJS 
+<br/>
+Link: https://algashopping-raphael-lima.netlify.app
 
 
 ## Minha aplicação:  
